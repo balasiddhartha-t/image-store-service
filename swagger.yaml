@@ -1,0 +1,56 @@
+info: {}
+paths:
+  /createAlbum:
+    post:
+      consumes:
+      - multipart/form-data
+      description: It creates an Album
+      operationId: CreateAlbum
+      responses:
+        "200": {}
+      tags:
+      - Album
+  /createImage:
+    post:
+      description: Creates an image in the album
+      operationId: CreateImage
+      tags:
+      - Image
+  /deleteAlbum:
+    post:
+      consumes:
+      - multipart/form-data
+      description: It deletes an Album
+      operationId: DeleteAlbum
+      responses:
+        "200":
+          $ref: '#/responses/AlbumResponse'
+      tags:
+      - Album
+  /deleteImage:
+    post:
+      consumes:
+      - multipart/form-data
+      description: Deletes an image in the album
+      operationId: DeleteImage
+      responses:
+        "200":
+          $ref: '#/responses/AlbumResponse'
+      tags:
+      - Image
+  /getImage:
+    get:
+      description: Get an image in the album
+      operationId: GetImage
+      tags:
+      - Image
+responses:
+  AlbumResponse:
+    description: Response back to the system
+    headers:
+      response:
+        description: |-
+          Return the response back to the API
+          in : Response
+        type: string
+swagger: "2.0"
