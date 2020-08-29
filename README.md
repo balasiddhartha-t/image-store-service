@@ -24,5 +24,5 @@ Note: In the docker-compose.yaml file, Under the go-image-store-service please m
 
 Once the containers are up, you can read the information related to the end points at
 
-### http://localhost:8081/docs
+###### http://localhost:8081/docs
 
