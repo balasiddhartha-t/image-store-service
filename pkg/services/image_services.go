@@ -46,7 +46,7 @@ func CreateImage(file multipart.File, folder string, fileName string) string {
 	io.Copy(newFile, file)
 
 	//Produce a message to Kafka
-	AlbumKafkaProducer(fileName + "is Created")
+	//AlbumKafkaProducer(fileName + "is Created")
 	return "Image Created"
 }
 
